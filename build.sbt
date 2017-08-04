@@ -1,10 +1,7 @@
-import multi.MultiBuild._
+import Common._
 
-lazy val core = multiModule("core")
+lazy val core = projectModule("core")
 
-lazy val submodule = multiModule("submodule")
+lazy val submodule = projectModule("submodule")
   .dependsOn(core)
 
-def multiModule(name: String): Project =
-  Project(id = name, base = file(name))
-    .settings(buildSettings)

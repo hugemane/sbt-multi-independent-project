@@ -1,5 +1,3 @@
-package multi
-
 import sbt._
 
 object Dependencies {
